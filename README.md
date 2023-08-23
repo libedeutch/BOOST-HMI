@@ -94,6 +94,31 @@ re <- model_estimator(H,z_start,count[,g], edge, distance, duplicate, id_start, 
 lambda_start, mu_theta, sigma_theta, mu_omega, sigma_omega, a_lambda, b_lambda, iter, burn, M, 
 tau_mu, phi_lambda ,mu_start, phi_start, si,tau_lambda,tau_theta,tau_omega,tau_phi,a_phi,b_phi,a_mu,b_mu);
 ```
+### Output 
++ H_sum
++ mu
++ phi
++ z_summed_by_row
++ z_colmeans
++ omega
++ theta
++ accept_theta
++ accept_omega
++ accept_mu
++ accept_phi
+
+```{r}
+# calculate Bayes factor
+source("code/utilities.R")
+bayes_factor <- bf(re)
+```
+
+## SV gene visualization
+
+![gene mog](readme/mog.png)
+
+
+
 
 
 
