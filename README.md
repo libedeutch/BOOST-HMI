@@ -115,7 +115,7 @@ bayes_factor <- bf(re)
 
 ## SV gene visualization
 
-![seqfish_mog](https://github.com/libedeutch/BOOST-HMI/assets/25946341/8cae3bb7-91a4-48ad-beeb-eecee10b2155)
+![seqfish mog](https://github.com/libedeutch/BOOST-HMI/assets/25946341/8cae3bb7-91a4-48ad-beeb-eecee10b2155)
 
 
 
