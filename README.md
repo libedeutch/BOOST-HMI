@@ -21,13 +21,18 @@ One replicate of the Mouse hippocampus seqFISH data cohort is Data/hippocampus_f
 The gene expression count file has the following format
 
 | |Tal1|Dmbx1|Emx2|...|fbll1|
---------------------------
-|Cell 1| 3|11|13|28|
-|Cell 2|3|9|14|20|
-|Cell 3|12|3|1|25|
-.
-.
-|Cell 257|1|0|0|6|
+|-----|-----|-----|-----|-----|
+|Cell 1| 3|11|13|...|28|
+|Cell 2|3|9|14|...|20|
+|Cell 3|12|3|1|...|25|
+|...|...|...|...|
+|Cell 257|1|0|0|...|6|
+
+| 3   | 11  | 13 | ... | 28 |
+|-----|-----|----|-----|----|
+| 3   | 9   | 14 | ... | 20 |
+| 12  | 3   | 1  | ... | 25 |
+| . . | . . |    |     |    |
 
 
 
