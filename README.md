@@ -39,6 +39,7 @@ The geostatistical profile has the following format
 |Cell 257|461|234|
 
 ## BOOST-HMI analysis
+
 ```{r}
 source("code/functions.R")
 Rcpp::sourceCpp("code/zinbm.cpp")
