@@ -40,7 +40,7 @@ The geostatistical profile has the following format
 
 ## BOOST-HMI analysis
 
-```{r}
+```{R}
 source("code/functions.R")
 Rcpp::sourceCpp("code/zinbm.cpp")
 load("data/hippocampus_field_43.Rdata")
