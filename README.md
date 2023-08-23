@@ -44,7 +44,9 @@ The geostatistical profile has the following format
 source("code/functions.R")
 Rcpp::sourceCpp("code/zinbm.cpp")
 load("data/hippocampus_field_43.Rdata")
+
 # prior specification
+
 Q <- 2
 c <- 0.15
 iter <- 50000
@@ -63,6 +65,7 @@ mu_theta <- 0;
 sigma_theta <- 3.5; # 95.44% theta in (-4,4)
 mu_omega <- 1;
 sigma_omega <- 0.5;
+
 # Prior in proposal distribution
 tau_mu <- 0.1 
 tau_theta<- 0.1
@@ -75,6 +78,7 @@ omega_start <- rep(1,Q)
 H = rep(0,nrow(count))
 phi_start <- c(1,1)
 mu_start <- c(0,0)
+
 # build edges and distance
 id_start <- 1;
 id_end <- nrow(count);
@@ -84,6 +88,7 @@ distance <- build$distance;
 duplicate <- build$duplicate;
 flag_start <- build$flag_start;
 flag_end <- build$flag_end;
+
 # Implement MCMC algorithm
 re <- model_estimator(H,z_start,count[,g], edge, distance, duplicate, id_start, id_end, flag_start, flag_end, theta_start, omega_start, 
 lambda_start, mu_theta, sigma_theta, mu_omega, sigma_omega, a_lambda, b_lambda, iter, burn, M, 
