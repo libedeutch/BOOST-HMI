@@ -51,43 +51,43 @@ iter <- 50000
 burn <- iter/2
 M <- 1
 rowsum = apply(count,1,sum)
-  scaler = exp(-1/nrow(count) * sum(log(rowsum)))
-  si = scaler * rowsum
-  a_phi = 0.01
-  b_phi= 100
-  a_mu = 0.01; 
-  b_mu= 100; 
-  a_lambda <- 0.01;
-  b_lambda<- 100;
-  mu_theta <- 0;
-  sigma_theta <- 3.5; # 95.44% theta in (-4,4)
-  mu_omega <- 1;
-  sigma_omega <- 0.5;
-  # Prior in proposal distribution
-  tau_mu <- 0.1 
-  tau_theta<- 0.1
-  tau_omega = 0.1
-  tau_phi = 0.1   
-  # parameter configuration
-  theta_start <- rnorm(1, mu_theta, sigma_theta); 
-  theta_start <- matrix(c(0,theta_start,theta_start,0), ncol =2)
-  omega_start <- rep(1,Q)
-  H = rep(0,nrow(count))
-  phi_start <- c(1,1)
-  mu_start <- c(0,0)
-  # build edges and distance
-  id_start <- 1;
-  id_end <- nrow(count);
-  build <- dist_list(x, y, c);
-  edge <- build$edge;
-  distance <- build$distance;
-  duplicate <- build$duplicate;
-  flag_start <- build$flag_start;
-  flag_end <- build$flag_end;
-  # Implement MCMC algorithm
-   re <- model_estimator(H,z_start,count[,g], edge, distance, duplicate, id_start, id_end, flag_start, flag_end, theta_start, omega_start, 
-                        lambda_start, mu_theta, sigma_theta, mu_omega, sigma_omega, a_lambda, b_lambda, iter, burn, M, 
-                        tau_mu, phi_lambda ,mu_start, phi_start, si,tau_lambda,tau_theta,tau_omega,tau_phi,a_phi,b_phi,a_mu,b_mu);
+scaler = exp(-1/nrow(count) * sum(log(rowsum)))
+si = scaler * rowsum
+a_phi = 0.01
+b_phi= 100
+a_mu = 0.01; 
+b_mu= 100; 
+a_lambda <- 0.01;
+b_lambda<- 100;
+mu_theta <- 0;
+sigma_theta <- 3.5; # 95.44% theta in (-4,4)
+mu_omega <- 1;
+sigma_omega <- 0.5;
+# Prior in proposal distribution
+tau_mu <- 0.1 
+tau_theta<- 0.1
+tau_omega = 0.1
+tau_phi = 0.1   
+# parameter configuration
+theta_start <- rnorm(1, mu_theta, sigma_theta); 
+theta_start <- matrix(c(0,theta_start,theta_start,0), ncol =2)
+omega_start <- rep(1,Q)
+H = rep(0,nrow(count))
+phi_start <- c(1,1)
+mu_start <- c(0,0)
+# build edges and distance
+id_start <- 1;
+id_end <- nrow(count);
+build <- dist_list(x, y, c);
+edge <- build$edge;
+distance <- build$distance;
+duplicate <- build$duplicate;
+flag_start <- build$flag_start;
+flag_end <- build$flag_end;
+# Implement MCMC algorithm
+ re <- model_estimator(H,z_start,count[,g], edge, distance, duplicate, id_start, id_end, flag_start, flag_end, theta_start, omega_start, 
+                      lambda_start, mu_theta, sigma_theta, mu_omega, sigma_omega, a_lambda, b_lambda, iter, burn, M, 
+                      tau_mu, phi_lambda ,mu_start, phi_start, si,tau_lambda,tau_theta,tau_omega,tau_phi,a_phi,b_phi,a_mu,b_mu);
 ```
 
 
