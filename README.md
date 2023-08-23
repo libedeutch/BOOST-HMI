@@ -20,7 +20,7 @@ The main steps of BOOST-HMI are the following:
 One replicate of the Mouse hippocampus seqFISH data cohort is Data/hippocampus_field_43.Rdata <br/>
 The gene expression count file has the following format
 
-| &nbsp |Tal1|Dmbx1|Emx2|...|fbll1|
+| ----- |Tal1|Dmbx1|Emx2|...|fbll1|
 |-----|-----|-----|-----|-----|
 |Cell 1| 3|11|13|...|28|
 |Cell 2|3|9|14|...|20|
