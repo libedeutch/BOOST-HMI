@@ -16,8 +16,7 @@ The main steps of BOOST-HMI are the following:
 4. Downstream analysis <br/>
 
 ## Example data
-In the directory ==Data==
-
+One replicate of the Mouse hippocampus seqFISH data cohort is  #Data/hippocampus_field_43.Rdata 
 
 
 
