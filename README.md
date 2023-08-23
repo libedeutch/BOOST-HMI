@@ -40,7 +40,7 @@ The geostatistical profile has the following format
 
 ## BOOST-HMI analysis
 
-```{R}
+```{r}
 source("code/functions.R")
 Rcpp::sourceCpp("code/zinbm.cpp")
 load("data/hippocampus_field_43.Rdata")
@@ -85,9 +85,9 @@ duplicate <- build$duplicate;
 flag_start <- build$flag_start;
 flag_end <- build$flag_end;
 # Implement MCMC algorithm
- re <- model_estimator(H,z_start,count[,g], edge, distance, duplicate, id_start, id_end, flag_start, flag_end, theta_start, omega_start, 
-                      lambda_start, mu_theta, sigma_theta, mu_omega, sigma_omega, a_lambda, b_lambda, iter, burn, M, 
-                      tau_mu, phi_lambda ,mu_start, phi_start, si,tau_lambda,tau_theta,tau_omega,tau_phi,a_phi,b_phi,a_mu,b_mu);
+re <- model_estimator(H,z_start,count[,g], edge, distance, duplicate, id_start, id_end, flag_start, flag_end, theta_start, omega_start, 
+lambda_start, mu_theta, sigma_theta, mu_omega, sigma_omega, a_lambda, b_lambda, iter, burn, M, 
+tau_mu, phi_lambda ,mu_start, phi_start, si,tau_lambda,tau_theta,tau_omega,tau_phi,a_phi,b_phi,a_mu,b_mu);
 ```
 
 
