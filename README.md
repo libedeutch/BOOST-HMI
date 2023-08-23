@@ -28,6 +28,15 @@ The gene expression count file has the following format
 |...|...|...|...|...|...|
 |Cell 257|1|0|0|...|6|
 
+The geostatistical profile has the following format
+
+|  |x|y|
+|-----|-----|-----|
+|Cell 1| 686|352|
+|Cell 2|488|572|
+|Cell 3|178|624|
+|...|...|...|
+|Cell 257|461|234|
 
 
 
