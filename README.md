@@ -16,7 +16,7 @@ The main steps of BOOST-HMI are the following:
 4. Downstream analysis <br/>
 
 ## Example data
-In the directory <mark style="background-color: #808080">Highlighted text</mark>   
+In the directory <mark style="background-color: #808080">Data</mark>   
 
 
 
