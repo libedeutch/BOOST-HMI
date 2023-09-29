@@ -46,23 +46,25 @@ Rcpp::sourceCpp("code/zinbm.cpp")
 load("data/hippocampus_field_43.Rdata")
 
 # prior specification
-
 Q <- 2
 c <- 0.15
 iter <- 50000
 burn <- iter/2
 M <- 1
+# size factor
 rowsum = apply(count,1,sum)
 scaler = exp(-1/nrow(count) * sum(log(rowsum)))
 si = scaler * rowsum
+# priors for phi
 a_phi = 0.01
 b_phi= 100
+# priors for mu
 a_mu = 0.01; 
-b_mu= 100; 
-a_lambda <- 0.01;
-b_lambda<- 100;
+b_mu= 100;
+# prior for theta
 mu_theta <- 0;
 sigma_theta <- 3.5; # 95.44% theta in (-4,4)
+# prior for omega
 mu_omega <- 1;
 sigma_omega <- 0.5;
 
