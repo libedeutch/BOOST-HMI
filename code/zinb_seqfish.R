@@ -81,13 +81,11 @@ for (g in 1:ncol(count)){
     mu_start <- c(tmp$centers[2],tmp$centers[1]);
     phi_start <- mu_start^2/
       (c(var(count[which(tmp$cluster==2),g]), var(count[which(tmp$cluster==1),g]))- mu_start);
-  }
-  else {
+  }else{
     z_start <-tmp$cluster -1
     mu_start <- c(tmp$centers[1],tmp$centers[2]);
     phi_start <- mu_start^2/
       (c(var(count[which(tmp$cluster==1),g]), var(count[which(tmp$cluster==2),g]))- mu_start);
-    
   }
   print(mu_start)
   phi_start[phi_start<0] <- 1
